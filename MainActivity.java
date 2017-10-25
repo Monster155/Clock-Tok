@@ -23,8 +23,8 @@ public class MainActivity extends Activity {
         tv = (TextView) findViewById(R.id.textView);
         tv2 = (TextView) findViewById(R.id.textView2);
 
-        //tv2.setText(date.getTime() + " ");
-        date.setTime(10);
+        tv2.setText(date.toString());
+        date.setTime(date.getTime() + 10000);
         tv.setText(date.toString());
 
         btn.setOnClickListener(new View.OnClickListener() {
