@@ -1,6 +1,8 @@
 package student8.example.com.clock_tok;
 
 import android.app.Activity;
+import android.app.AlarmManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +16,8 @@ public class MainActivity extends Activity {
     Button btn;
     TextView tv, tv2;
     Date date = new Date();
+    AlarmManager am;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +26,8 @@ public class MainActivity extends Activity {
         btn = (Button) findViewById(R.id.button);
         tv = (TextView) findViewById(R.id.textView);
         tv2 = (TextView) findViewById(R.id.textView2);
+        am = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
+        am.setTime(date.getTime());
 
         tv2.setText(date.toString());
         date.setTime(date.getTime() + 10000);
