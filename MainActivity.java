@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         btn = (Button) findViewById(R.id.button);
         tv = (TextView) findViewById(R.id.textView);
-        tv = (TextView) findViewById(R.id.textView2);
+        tv2 = (TextView) findViewById(R.id.textView2);
 
         //tv2.setText(date.getTime() + " ");
         date.setTime(10);
